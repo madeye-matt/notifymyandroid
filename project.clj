@@ -1,4 +1,4 @@
-(defproject com.madeye.clojure.notifymyandroid/notifymyandroid "0.1.2"
+(defproject com.madeye.clojure.notifymyandroid/notifymyandroid "0.1.3"
   :description "Clojure bindings for Notify My Android"
   :url "https://github.com/madeye-matt/notifymyandroid"
   :license {:name "Eclipse Public License"

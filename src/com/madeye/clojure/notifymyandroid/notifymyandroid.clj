@@ -66,6 +66,7 @@
           xml-string (:body response)
           reader (java.io.StringReader. xml-string)
         ]
+      (info "Sending: " event "-" description "-" priority "-" apikey)
       (build-result (zip/xml-zip (xml/parse reader)))
     )
   )
