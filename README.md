@@ -6,16 +6,16 @@ Clojure bindings for the Notify My Android REST API
 
 leiningen
 
-    [com.madeye.clojure.notifymyandroid/notifymyandroid "0.1.0"]
+    [com.madeye.clojure.notifymyandroid/notifymyandroid "0.1.1"]
 
 gradle
 
-    compile "com.madeye.clojure.notifymyandroid:notifymyandroid:0.1.0"
+    compile "com.madeye.clojure.notifymyandroid:notifymyandroid:0.1.1"
 
 maven
 
     <dependency>
       <groupId>com.madeye.clojure.notifymyandroid</groupId>
       <artifactId>notifymyandroid</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
     </dependency>

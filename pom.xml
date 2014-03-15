@@ -3,7 +3,7 @@
   <groupId>com.madeye.clojure.notifymyandroid</groupId>
   <artifactId>notifymyandroid</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <name>notifymyandroid</name>
   <description>Clojure bindings for Notify My Android</description>
   <url>https://github.com/madeye-matt/notifymyandroid</url>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/madeye-matt/notifymyandroid.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/madeye-matt/notifymyandroid.git</developerConnection>
-    <tag>6e91b8841ae766fc72926fc7a0dda54e2378e4f3</tag>
+    <tag>d6cd15ad32d767fbd676820196d0ff95b8068fdc</tag>
     <url>https://github.com/madeye-matt/notifymyandroid</url>
   </scm>
   <build>
