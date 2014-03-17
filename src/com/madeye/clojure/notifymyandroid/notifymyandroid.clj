@@ -46,11 +46,11 @@
 (defn build-result
   [xml]
   (let [success (zxml/xml-> xml :success)
-        error (zxml/xml-> xml :error)]
+        error-msg (zxml/xml-> xml :error)]
     (if (not (empty? success))
       true
       (do
-        (error "Failed to send message: " error)
+        (error "Failed to send message: " error-msg)
         false
       )
     )
@@ -72,6 +72,8 @@
           xml-string (:body response)
           reader (java.io.StringReader. xml-string)
         ]
+      (debug "query-params: " params)
+      (debug "response: " response)
       (info "Sending: " event "-" description "-" priority "-" apikey)
       (build-result (zip/xml-zip (xml/parse reader)))
     )
@@ -80,10 +82,11 @@
 
 (defn notifymyandroid
   ([event description priority apikeys]
+    (debug "apikeys: "  (count apikeys))
     (map (partial notifyfn event description priority) apikeys)
   )
   ([event description priority]
-    (notifymyandroid nma-apikeys event description priority)
+    (notifymyandroid event description priority nma-apikeys)
   )
   ([event description]
     (notifymyandroid event description (:nma.priority config))
