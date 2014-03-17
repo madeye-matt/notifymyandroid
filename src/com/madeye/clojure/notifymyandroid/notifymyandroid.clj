@@ -83,7 +83,9 @@
 (defn notifymyandroid
   ([event description priority apikeys]
     (debug "apikeys: "  (count apikeys))
-    (map (partial notifyfn event description priority) apikeys)
+    (doseq [this-key apikeys]
+      (notifyfn event description priority this-key)
+    )
   )
   ([event description priority]
     (notifymyandroid event description priority nma-apikeys)
