@@ -47,7 +47,13 @@
   [xml]
   (let [success (zxml/xml-> xml :success)
         error (zxml/xml-> xml :error)]
-    (not (empty? success))
+    (if (not (empty? success))
+      true
+      (do
+        (error "Failed to send message: " error)
+        false
+      )
+    )
   )
 )
 
